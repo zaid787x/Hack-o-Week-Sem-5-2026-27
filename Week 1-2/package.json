@@ -1,0 +1,15 @@
+{
+  "name": "aether-chatbot",
+  "version": "1.0.0",
+  "description": "Aether - Interactive Chat Assistant",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.19.2",
+    "node-fetch": "^2.7.0"
+  }
+}

@@ -1,0 +1,312 @@
+[
+  {
+    "keywords": [
+      "hello",
+      "hi",
+      "hey",
+      "good morning",
+      "good afternoon",
+      "howdy",
+      "greetings",
+      "sup",
+      "what's up",
+      "whats up"
+    ],
+    "answer": "Hello! I am **Zaid Chatbot**, your intelligent chat assistant.\n\nI can help you with:\n- **Programming & code** questions\n- **Concept explanations** (tech, science, math)\n- **Writing assistance** (emails, summaries)\n- **Brainstorming** ideas\n- **General knowledge** and FAQs\n\nWhat would you like to explore today?"
+  },
+  {
+    "keywords": [
+      "who are you",
+      "what are you",
+      "about you",
+      "what is aether",
+      "tell me about yourself",
+      "your name",
+      "introduce yourself"
+    ],
+    "answer": "I am **Zaid Chatbot**, a locally-hosted chat assistant powered by a REST API backend.\n\n**Built with:**\n- Backend: Node.js/Express (REST API)\n- Frontend: Vanilla HTML, CSS and JavaScript\n- Design: Claude-inspired warm light theme\n\n**Capabilities:**\n- Gemini 2.5 generative AI responses\n- FAQ knowledge base with keyword matching\n- Markdown response formatting\n- Text-to-speech via Web Speech API\n- Clipboard copy for messages and code blocks\n- Suggestion chips for quick-start prompts\n\nI run entirely on your local machine. Fully configurable via environment variables!"
+  },
+  {
+    "keywords": [
+      "what is rest api",
+      "rest api",
+      "restful",
+      "api design",
+      "http api",
+      "api endpoint",
+      "api request",
+      "api response",
+      "what is rest"
+    ],
+    "answer": "## What is a REST API?\n\nA **REST API** (Representational State Transfer) is a standard way for software systems to communicate over HTTP.\n\n**Core HTTP Methods:**\n- **GET** -- Retrieve data (e.g. GET /api/history)\n- **POST** -- Send new data (e.g. POST /api/chat)\n- **PUT** -- Update existing data\n- **DELETE** -- Remove data (e.g. DELETE /api/history)\n\n**Key Principles:**\n- **Stateless** -- each request is self-contained\n- **Client-Server** -- frontend and backend are decoupled\n- **Uniform Interface** -- consistent URL structure\n- **JSON** -- standard data exchange format\n\n**This chatbot REST endpoints:**\n```http\nPOST   /api/chat      -- send a message\nGET    /api/history   -- fetch chat history\nDELETE /api/history   -- clear chat history\n```"
+  },
+  {
+    "keywords": [
+      "javascript",
+      "js",
+      "ecmascript",
+      "vanilla js",
+      "async await",
+      "asynchronous",
+      "async programming",
+      "event loop",
+      "non-blocking",
+      "promise",
+      "callback hell",
+      "synchronous vs"
+    ],
+    "answer": "## Synchronous vs Asynchronous Code\n\n**Synchronous** -- code runs line by line; each step waits.\n**Asynchronous** -- code does not block; other tasks run while waiting.\n\n**Sync Example:**\n```javascript\nconsole.log('Start');\nconst data = readFileSync('file.txt'); // Blocks here\nconsole.log('Done');\n```\n\n**Async/Await Example:**\n```javascript\nconsole.log('Start');\nconst res  = await fetch('/api/chat'); // Does NOT block\nconst data = await res.json();\nconsole.log('Done:', data.text);\n```\n\n**Why it matters:**\n- API calls, file reads, and DB queries are slow\n- Async prevents your UI from freezing\n- JavaScript uses an **Event Loop** to handle async operations"
+  },
+  {
+    "keywords": [
+      "python",
+      "python3",
+      "learn python",
+      "javascript tutorial",
+      "vanilla js",
+      "ecmascript",
+      "what is javascript",
+      "learn javascript",
+      "javascript code",
+      "js code"
+    ],
+    "answer": "## JavaScript Overview\n\n**JavaScript** is the language of the web -- it runs in every browser.\n\n**Key Concepts:**\n- Variables: let, const, var\n- Functions: regular, arrow (=>), async/await\n- DOM: document.getElementById(), querySelector()\n- Events: addEventListener('click', handler)\n- Fetch API: making HTTP requests to REST APIs\n\n**Quick Fetch Example:**\n```javascript\nconst sendMessage = async (msg) => {\n  const res = await fetch('/api/chat', {\n    method: 'POST',\n    headers: { 'Content-Type': 'application/json' },\n    body: JSON.stringify({ message: msg })\n  });\n  const data = await res.json();\n  console.log(data.text);\n};\nsendMessage('hello');\n```"
+  },
+  {
+    "keywords": [
+      "async",
+      "synchronous",
+      "asynchronous",
+      "async await",
+      "promise",
+      "callback",
+      "event loop",
+      "non-blocking",
+      "python",
+      "python3",
+      "learn python"
+    ],
+    "answer": "## Python Overview\n\n**Python** is high-level, readable, and great for beginners and experts alike.\n\n**Key Features:**\n- Simple, English-like syntax\n- Huge standard library\n- Great for web (Flask, Django), data science, and AI/ML\n\n**Quick Flask REST API:**\n```python\nfrom flask import Flask, request, jsonify\n\napp = Flask(__name__)\nhistory = []\n\n@app.route('/api/chat', methods=['POST'])\ndef chat():\n    data = request.get_json()\n    msg = data.get('message', '')\n    reply = f'You said: {msg}'\n    return jsonify({'text': reply})\n\nif __name__ == '__main__':\n    app.run(port=3000)\n```"
+  },
+  {
+    "keywords": [
+      "html",
+      "html5",
+      "markup",
+      "semantic html",
+      "tags",
+      "elements",
+      "markup language"
+    ],
+    "answer": "## HTML (HyperText Markup Language)\n\nHTML is the **structure** of every web page.\n\n**Basic Structure:**\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>My Page</title>\n</head>\n<body>\n  <h1>Hello, World!</h1>\n  <p>A paragraph.</p>\n  <button id=\"btn\">Click Me</button>\n</body>\n</html>\n```\n\n**Key Semantic Tags:**\n- header -- page header\n- nav -- navigation links\n- main -- main content area\n- section -- logical sections\n- footer -- page footer\n- article -- self-contained content"
+  },
+  {
+    "keywords": [
+      "css",
+      "stylesheet",
+      "flexbox",
+      "grid",
+      "responsive",
+      "media query",
+      "animations",
+      "grid layout",
+      "responsive design"
+    ],
+    "answer": "## CSS (Cascading Style Sheets)\n\nCSS controls the **visual presentation** of HTML elements.\n\n**Key Concepts:**\n- **Box Model:** margin, border, padding, content\n- **Flexbox:** 1D layout (display: flex)\n- **Grid:** 2D layout (display: grid)\n- **CSS Variables:** --accent-color: #d97757\n- **Media Queries:** responsive breakpoints\n\n**Example:**\n```css\n:root {\n  --primary: #d97757;\n}\n\n.chat-form {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n\n@media (max-width: 768px) {\n  .sidebar { display: none; }\n}\n```"
+  },
+  {
+    "keywords": [
+      "node",
+      "nodejs",
+      "node.js",
+      "express",
+      "npm",
+      "backend",
+      "expressjs",
+      "express.js",
+      "npm install"
+    ],
+    "answer": "## Node.js and Express\n\n**Node.js** runs JavaScript on the server side.\n**Express** is a lightweight web framework for Node.\n\n**Setup:**\n```bash\nnpm init -y\nnpm install express cors\n```\n\n**Simple REST Server:**\n```javascript\nconst express = require('express');\nconst app = express();\napp.use(express.json());\n\nlet history = [];\n\napp.get('/api/history', (req, res) => res.json(history));\n\napp.post('/api/chat', (req, res) => {\n  const { message } = req.body;\n  const reply = { sender: 'bot', text: 'Got: ' + message };\n  history.push(reply);\n  res.json(reply);\n});\n\napp.listen(3000, () => console.log('Running on port 3000'));\n```"
+  },
+  {
+    "keywords": [
+      "git",
+      "github",
+      "version control",
+      "commit",
+      "branch",
+      "merge",
+      "pull request",
+      "repository",
+      "clone",
+      "git commit",
+      "git branch",
+      "git merge",
+      "git clone"
+    ],
+    "answer": "## Git Version Control\n\n**Git** tracks code changes over time and enables team collaboration.\n\n**Essential Commands:**\n```bash\n# Initialize and commit\ngit init\ngit add .\ngit commit -m \"Initial commit\"\n\n# Connect to GitHub\ngit remote add origin https://github.com/user/repo.git\ngit push -u origin main\n\n# Branching\ngit checkout -b feature/my-feature\ngit merge feature/my-feature\n\n# Undo last commit (keep changes)\ngit reset --soft HEAD~1\n```\n\n**Best Practices:**\n- Commit often with descriptive messages\n- Use branches for every feature or fix\n- Always pull before you push"
+  },
+  {
+    "keywords": [
+      "database",
+      "sql",
+      "mysql",
+      "postgresql",
+      "mongodb",
+      "sqlite",
+      "nosql",
+      "query",
+      "schema",
+      "sql query"
+    ],
+    "answer": "## Databases Overview\n\n**Relational (SQL):** data in tables with rows and columns\n- Examples: MySQL, PostgreSQL, SQLite\n\n**Non-Relational (NoSQL):** flexible document or key-value storage\n- Examples: MongoDB, Redis, Firebase\n\n**SQL Quick Reference:**\n```sql\nCREATE TABLE users (\n  id    INTEGER PRIMARY KEY,\n  name  TEXT NOT NULL,\n  email TEXT UNIQUE\n);\n\nINSERT INTO users (name, email) VALUES ('Alice', 'a@email.com');\nSELECT * FROM users WHERE name = 'Alice';\nUPDATE users SET email = 'new@email.com' WHERE id = 1;\nDELETE FROM users WHERE id = 1;\n```"
+  },
+  {
+    "keywords": [
+      "machine learning",
+      "ml",
+      "artificial intelligence",
+      "ai",
+      "deep learning",
+      "neural network",
+      "llm",
+      "gpt",
+      "training",
+      "model",
+      "nlp",
+      "large language model",
+      "training model"
+    ],
+    "answer": "## Machine Learning and AI\n\n**AI:** systems that simulate human intelligence.\n**ML:** AI that learns patterns from data without explicit programming.\n\n**Types of ML:**\n- **Supervised** -- labeled data (spam detection, image classification)\n- **Unsupervised** -- finds hidden patterns (clustering)\n- **Reinforcement** -- learns via reward/penalty (game bots)\n\n**LLMs (Large Language Models):**\n- Trained on billions of text documents\n- Generate human-like responses via next-token prediction\n- Examples: GPT-4, Claude, Gemini\n\n**Simple Python Example:**\n```python\nfrom sklearn.linear_model import LinearRegression\nimport numpy as np\n\nX = np.array([[1],[2],[3],[4]])\ny = np.array([2, 4, 6, 8])\n\nmodel = LinearRegression().fit(X, y)\nprint(model.predict([[5]]))  # [10.0]\n```"
+  },
+  {
+    "keywords": [
+      "docker",
+      "container",
+      "kubernetes",
+      "devops",
+      "ci/cd",
+      "deployment",
+      "dockerfile",
+      "deployment pipeline"
+    ],
+    "answer": "## Docker and DevOps\n\n**Docker** packages your app and its dependencies into portable **containers**.\n\n**Dockerfile Example:**\n```dockerfile\nFROM node:18-alpine\nWORKDIR /app\nCOPY package*.json .\nRUN npm install\nCOPY . .\nEXPOSE 3000\nCMD [\"node\", \"server.js\"]\n```\n\n**Common Docker Commands:**\n```bash\ndocker build -t my-app .\ndocker run -p 3000:3000 my-app\ndocker-compose up -d\n```\n\n**DevOps Pipeline:**\nCode -> Build -> Test -> Containerize -> Deploy -> Monitor"
+  },
+  {
+    "keywords": [
+      "security",
+      "cybersecurity",
+      "encryption",
+      "https",
+      "ssl",
+      "xss",
+      "sql injection",
+      "authentication",
+      "jwt",
+      "password",
+      "hash",
+      "xss attack",
+      "https ssl",
+      "jwt token",
+      "bcrypt",
+      "hacking"
+    ],
+    "answer": "## Cybersecurity Essentials\n\n**Common Web Vulnerabilities:**\n- **XSS** -- injecting malicious scripts into pages\n- **SQL Injection** -- inserting SQL into queries to manipulate the database\n- **CSRF** -- tricking users into unauthorized requests\n\n**Best Practices:**\n- Always **escape user input** before rendering HTML\n- Use **parameterized SQL queries**, never string concatenation\n- Hash passwords with **bcrypt** (never store plain text)\n- Use **HTTPS** for all data in transit\n- Implement **JWT** or **OAuth 2.0** for authentication\n\n**Password Hashing (Node.js):**\n```javascript\nconst bcrypt = require('bcrypt');\nconst hash  = await bcrypt.hash('myPassword', 10);\nconst match = await bcrypt.compare('myPassword', hash); // true\n```"
+  },
+  {
+    "keywords": [
+      "email",
+      "draft email",
+      "write email",
+      "professional email",
+      "project update",
+      "follow up",
+      "follow up email"
+    ],
+    "answer": "## Professional Email Template\n\n**Subject:** Project Status Update Request -- [Project Name]\n\nDear [Recipient's Name],\n\nI hope this message finds you well. I wanted to touch base regarding **[Project Name]** and ensure we are aligned on progress and milestones.\n\nCould you please provide an update on:\n- **Current progress** against the planned timeline\n- Any **blockers or challenges** that need attention\n- **Next steps** and estimated completion dates\n\nYour timely response would be greatly appreciated.\n\nBest regards,\n[Your Name] | [Your Title]\n\n---\n**Email Writing Tips:**\n- Keep subject lines clear and specific\n- Be concise -- get to the point quickly\n- Use bullet points for multiple items\n- Always include a clear call-to-action"
+  },
+  {
+    "keywords": [
+      "brainstorm",
+      "startup",
+      "ideas",
+      "business idea",
+      "gardening",
+      "green tech",
+      "agritech",
+      "innovation",
+      "startup idea",
+      "gardening tech",
+      "creative idea"
+    ],
+    "answer": "## Tech + Gardening Startup Ideas\n\n**1. SmartRoot -- AI Plant Health Monitor**\nUse computer vision to diagnose plant diseases and pests via phone camera. Subscription model with personalized treatment plans.\n\n**2. HydroConnect -- IoT Irrigation Network**\nSmart soil sensors and automated watering valves controlled via mobile app. Saves water by irrigating only when needed.\n\n**3. SeedBank Marketplace**\nHyperlocal seed and sapling exchange platform. Gardeners list excess seeds and neighbors buy or trade locally.\n\n**4. GrowCoach -- AI Garden Planner**\nSeasonal planting calendar based on your location, soil type, and climate data with smart reminders.\n\n**5. VermiLink -- Composting-as-a-Service**\nSubscription vermicomposting kits with live worm colonies, app-guided feeding schedules, and organic compost pickup."
+  },
+  {
+    "keywords": [
+      "sort",
+      "sorting",
+      "bubble sort",
+      "merge sort",
+      "quick sort",
+      "algorithm",
+      "time complexity",
+      "big o",
+      "sort algorithm",
+      "big o notation"
+    ],
+    "answer": "## Sorting Algorithms\n\n| Algorithm   | Best       | Average    | Worst      | Space    |\n|-------------|------------|------------|------------|----------|\n| Bubble Sort | O(n)       | O(n2)      | O(n2)      | O(1)     |\n| Merge Sort  | O(n log n) | O(n log n) | O(n log n) | O(n)     |\n| Quick Sort  | O(n log n) | O(n log n) | O(n2)      | O(log n) |\n\n**Quick Sort in JavaScript:**\n```javascript\nfunction quickSort(arr) {\n  if (arr.length <= 1) return arr;\n  const pivot = arr[Math.floor(arr.length / 2)];\n  const left  = arr.filter(x => x < pivot);\n  const mid   = arr.filter(x => x === pivot);\n  const right = arr.filter(x => x > pivot);\n  return [...quickSort(left), ...mid, ...quickSort(right)];\n}\nconsole.log(quickSort([3,1,4,1,5,9,2,6]));\n// Output: [1,1,2,3,4,5,6,9]\n```"
+  },
+  {
+    "keywords": [
+      "how does this work",
+      "how does the chatbot work",
+      "how are you built",
+      "tech stack",
+      "technologies used",
+      "how chatbot work"
+    ],
+    "answer": "## How This Chatbot Works\n\n**Architecture:**\n```\nBrowser (Frontend)\n   |\n   |  HTTP Requests (REST API)\n   v\nPowerShell HTTP Server (Backend)\n   |\n   |  Keyword Pattern Matching\n   v\nFAQ JSON Database -> Structured Answer\n```\n\n**Tech Stack:**\n- Backend: Native PowerShell using System.Net.HttpListener\n- Frontend: Vanilla HTML5, CSS3, JavaScript (ES6+)\n- FAQ Data: Stored in faq.json, loaded at server start\n\n**REST Endpoints:**\n- POST /api/chat -- send a message\n- GET /api/history -- load history\n- DELETE /api/history -- clear chat\n\n**Response Engine:**\nYour message is scanned against keywords in faq.json. The first match returns a rich, markdown-formatted answer. No external AI needed!"
+  },
+  {
+    "keywords": [
+      "joke",
+      "funny",
+      "laugh",
+      "humor",
+      "tell me a joke",
+      "make me laugh",
+      "developer joke"
+    ],
+    "answer": "Here are some developer classics!\n\n**Joke 1:**\nWhy do programmers prefer dark mode?\nBecause light attracts bugs!\n\n**Joke 2:**\nA SQL query walks into a bar, walks up to two tables and asks:\n'Can I join you?'\n\n**Joke 3:**\nThere are only 10 types of people in the world:\nThose who understand binary, and those who don't.\n\n**Joke 4:**\nWhy did the developer go broke?\nBecause he used up all his cache!\n\nWant more? Just ask for more jokes!"
+  },
+  {
+    "keywords": [
+      "thank",
+      "thanks",
+      "thank you",
+      "appreciate",
+      "helpful",
+      "great",
+      "awesome",
+      "perfect",
+      "great job",
+      "well done"
+    ],
+    "answer": "You're very welcome! I'm glad I could help.\n\nFeel free to ask me anything else -- code, concepts, writing, or just a quick question. I'm here whenever you need me!"
+  },
+  {
+    "keywords": [
+      "help",
+      "commands",
+      "what can you do",
+      "capabilities",
+      "features",
+      "topics",
+      "list",
+      "options",
+      "list topics",
+      "menu"
+    ],
+    "answer": "## What I Can Help With\n\nHere are the topics I have detailed knowledge on:\n\n- **REST API** -- design, endpoints, HTTP methods\n- **JavaScript** -- syntax, async/await, fetch API\n- **Python** -- Flask, basics, ML examples\n- **HTML and CSS** -- structure, flexbox, responsive design\n- **Node.js and Express** -- server setup, routing\n- **Git and GitHub** -- version control, branching\n- **Databases** -- SQL, NoSQL, queries\n- **AI and ML** -- concepts, LLMs, scikit-learn\n- **Docker and DevOps** -- containers, CI/CD\n- **Cybersecurity** -- XSS, SQL injection, JWT\n- **Email Writing** -- professional templates\n- **Brainstorming** -- startup and creative ideas\n- **Sorting Algorithms** -- complexity analysis\n- **Jokes** -- developer humor\n\nJust type any topic or question and I'll give you a detailed answer!"
+  }
+]
