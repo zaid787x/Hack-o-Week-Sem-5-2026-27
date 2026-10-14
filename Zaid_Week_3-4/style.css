@@ -1,0 +1,187 @@
+/* =========================
+   GLOBAL APP BACKGROUND
+========================= */
+
+.stApp {
+    background-color: #f4f7fb;
+    font-family: "Segoe UI", sans-serif;
+}
+
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+h1 {
+
+    color: #1e3a8a;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+
+
+/* Sub headings */
+
+h2, h3 {
+
+    color: #2563eb;
+    font-weight: 600;
+
+}
+
+
+
+/* =========================
+   SIDEBAR DESIGN
+========================= */
+
+
+section[data-testid="stSidebar"] {
+
+    background-color: #dbeafe;
+    border-right: 2px solid #93c5fd;
+
+}
+
+
+section[data-testid="stSidebar"] h1 {
+
+    color: #1e40af;
+
+}
+
+
+
+/* Sidebar text */
+
+section[data-testid="stSidebar"] label {
+
+    color: #1e3a8a;
+    font-weight: 600;
+
+}
+
+
+
+/* =========================
+   DATAFRAME TABLE
+========================= */
+
+
+div[data-testid="stDataFrame"] {
+
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+/* =========================
+   BUTTON STYLE
+========================= */
+
+
+.stButton > button {
+
+    background-color: #2563eb;
+    color: white;
+
+    border-radius: 12px;
+    border: none;
+
+    padding: 10px 25px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+
+.stButton > button:hover {
+
+    background-color: #1d4ed8;
+    color:white;
+
+}
+
+
+
+/* =========================
+   METRIC CARDS
+========================= */
+
+
+div[data-testid="stMetric"] {
+
+    background-color:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0px 4px 12px rgba(0,0,0,0.08);
+
+}
+
+
+
+/* Metric value */
+
+div[data-testid="stMetricValue"] {
+
+    color:#2563eb;
+
+    font-size:35px;
+
+    font-weight:700;
+
+}
+
+
+
+/* =========================
+   ALERT BOX
+========================= */
+
+
+.stAlert {
+
+    border-radius:15px;
+
+}
+
+
+
+/* =========================
+   CHART CONTAINER
+========================= */
+
+
+div[data-testid="stPlotlyChart"] {
+
+    background-color:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer {
+
+    visibility:hidden;
+
+}
